@@ -7,6 +7,7 @@ module.exports = {
         },
         softblue: {
           350: "#99AECC",
+          500: "#5884C3",
         },
         red: {
           200: "#FF0000",
@@ -20,5 +21,9 @@ module.exports = {
   variants: {
     textColor: ["responsive", "active"],
     textDecoration: ["responsive", "active"],
+    extend: {
+      // ...
+      animation: ["hover", "focus"],
+    },
   },
 };

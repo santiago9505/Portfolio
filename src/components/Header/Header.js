@@ -5,14 +5,14 @@ import colombia from "./../../assets/static/colombian-flag.png";
 import usa from "./../../assets/static/usa-flag.png";
 import "../../index.css";
 
-class Navbar extends Component {
+class Header extends Component {
   render() {
     return (
-      <header className="flex justify-between bg-blue-450 items-end px-32 py-8">
+      <header className="flex flex justify-between h-16 my-5 items-end">
         <figure className="">
           <img src={logo} alt="" className="w-40" />
         </figure>
-        <ul className="flex gap-10 text-softblue-350 font-body text-base font-medium">
+        <ul className="flex gap-11 text-softblue-350 font-body text-base font-medium">
           {MenuItems.map((item, index) => {
             return (
               <li key={index} className="active:text-white active:underline">
@@ -22,7 +22,7 @@ class Navbar extends Component {
               </li>
             );
           })}
-          <li className="flex gap-1">
+          <li className="flex gap-1.5">
             <button>
               <img src={colombia} className="w-4" alt="" />
             </button>
@@ -37,4 +37,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default Header;
