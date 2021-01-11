@@ -8,7 +8,7 @@ import "../../index.css";
 class Header extends Component {
   render() {
     return (
-      <header className="flex flex justify-between h-16 my-5 items-end">
+      <header className="flex flex justify-between h-16 my-5 py-2 items-end">
         <figure className="">
           <img src={logo} alt="" className="w-40" />
         </figure>
