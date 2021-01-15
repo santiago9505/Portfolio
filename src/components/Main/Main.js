@@ -19,123 +19,125 @@ import "../../index.css";
 class Header extends Component {
   render() {
     return (
-      <main className="grid grid-cols-3  static h-full">
-        <article className="font-body text-6xl font-medium-500 pt-12">
-          <h1 className="text-softblue-350">Hello,</h1>
-          <h1 className="text-softblue-500">this is</h1>
-          <h1 className="text-white font-semibold">Santiago</h1>
-        </article>
-        <figure className="justify-self-center">
-          <img src={Foto} className="" alt="" />
-        </figure>
-        <article className="flex h-60  font-body text-2xl font-medium-500 text-white pt-32 pl-10">
-          <h2 clasName="">
-            Business Administration <br />
-            Passionate about I.T <br />
-            Lifelong learning
-          </h2>
-
-          <figure className="absolute bottom-20 left-0">
-            <img src={Rectangulo} className="w-screen h-28" alt="" />
+      <main className="h-96">
+        <section className="grid grid-cols-2 grid-rows-2 font-body font-medium px-6 py-6 lg:grid-cols-3  lg:static lg:h-full">
+          <article className="text-3xl lg:font-body lg:text-6xl lg:font-medium-500 lg:pt-12">
+            <h1 className="text-softblue-350">Hello,</h1>
+            <h1 className="text-softblue-500">this is</h1>
+            <h1 className="text-white font-semibold">Santiago</h1>
+          </article>
+          <figure className="lg:justify-self-center">
+            <img src={Foto} className="" alt="" />
           </figure>
-          <section className="grid grid-cols-12 gap-2 h-24 absolute bottom-20 left-0 mx-32 text-center font-body font-medium text-blue-450 text-xs">
-            <figure className="">
+          <article className="text-xl text-white col-span-2 h-2/4 lg:col-span-1 lg:flex lg:h-60  lg:font-body lg:text-2xl lg:font-medium-500 lg:text-white lg:pt-24 lg:pl-10">
+            <h2 clasName="">
+              Business Administration Passionate about I.T <br /> Lifelong
+              learning
+            </h2>
+          </article>
+        </section>
+        <div className="">
+          <figure className="lg:absolute lg:bottom-20 lg:left-0">
+            <img src={Rectangulo} className="lg:w-full lg:h-28" alt="" />
+          </figure>
+          <section className="grid grid-cols-3 ml-10 gap-2 text-white items-center justify-items-center text-center lg:grid-cols-12 lg:gap-2 lg:h-24 lg:absolute lg:bottom-20 lg:left-0 lg:mx-32 lg:text-center lg:font-body lg:font-medium lg:text-blue-450 lg:text-xs">
+            <figure className="items-center">
               <img
                 src={Management}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">Project Management</figcaption>
+              <figcaption className="">Project Management</figcaption>
             </figure>
-            <figure className="">
+            <figure className="items-center">
               <img
                 src={Data}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">
+              <figcaption className="">
                 Data <br /> Analyst
               </figcaption>
             </figure>
             <figure className="">
               <img
                 src={Finance}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">Finance</figcaption>
+              <figcaption className="">Finance</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Html}
-                className="w-12 hover:animate-bounce m-auto pt-1"
+                className="w-14 hover:animate-bounce lg:m-auto"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Css}
-                className="w-12 hover:animate-bounce m-auto pt-1"
+                className="w-14 hover:animate-bounce lg:m-auto"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Js}
-                className="w-12 hover:animate-bounce m-auto pt-1"
+                className="w-14 hover:animate-bounce lg:m-auto"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Bootstrap}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">Bootstrap</figcaption>
+              <figcaption className="">Bootstrap</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Node}
-                className="w-14 pt-3 hover:animate-bounce m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-4">Node.js</figcaption>
+              <figcaption className="">Node.js</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Python}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">Python</figcaption>
+              <figcaption className="">Python</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Reactjs}
-                className="w-14 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">React.js</figcaption>
+              <figcaption className="">React.js</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Tailwind}
-                className="w-14 hover:animate-bounce m-auto pt-2"
+                className="w-14 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-5">Tailwind</figcaption>
+              <figcaption className="">Tailwind</figcaption>
             </figure>
             <figure className="">
               <img
                 src={Maths}
-                className="w-12 hover:animate-bounce m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto"
                 alt=""
               />
-              <figcaption className="pt-3">Discrete Mathematics</figcaption>
+              <figcaption className="">Discrete Mathematics</figcaption>
             </figure>
           </section>
-        </article>
+        </div>
       </main>
     );
   }

@@ -5,7 +5,7 @@ import Main from "./components/Main/Main.js";
 
 function App() {
   return (
-    <div className="flex flex-col bg-blue-450 h-screen px-32">
+    <div className="bg-blue-450 lg:px-32 lg:h-screen">
       <Header />
       <Main />
       <Footer />

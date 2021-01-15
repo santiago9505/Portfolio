@@ -6,26 +6,28 @@ import Linkedin from "../../assets/static/linkedin.png";
 class Footer extends Component {
   render() {
     return (
-      <footer className="bg-white text-blue-450 flex px-32 pt-2 w-screen h-20 justify-center absolute bottom-0 left-0 gap-40 items-center">
-        <section className="text-xs text-center">
+      <footer className="text-center text-white py-20 lg:bg-white lg:text-blue-450 lg:flex lg:px-32 lg:pt-2 lg:w-screen lg:h-20 lg:justify-center lg:absolute lg:bottom-0 lg:left-0 lg:gap-40 lg:items-center lg:py-0">
+        <section className="h-40 flex flex-col justify-center lg:text-xs lg:text-center">
           <h1>© Santiago Guáqueta Angarita 2021</h1>
-          <a href="">Designed by: Oscar Castro</a>
+          <a href="" className="">
+            Designed by: Oscar Castro
+          </a>
         </section>
 
-        <ul className="flex gap-32  font-body text-xs font-medium">
-          <li className="flex flex-col gap-1.5">
+        <ul className="lg:flex lg:gap-32  lg:font-body lg:text-xs lg:font-medium">
+          <li className="lg:flex lg:flex-col lg:gap-1.5">
             <h1 href="#content" className="font-bold">
               CONTENT
             </h1>
             <a href="">Blog</a>
           </li>
-          <li className="flex flex-col gap-1.5">
+          <li className="lg:flex lg:flex-col lg:gap-1.5">
             <h1 href="courses" className="font-bold">
               COURSES
             </h1>
             <a href="https://platzi.com/p/santiagoguquetaangarita/">Platzi</a>
           </li>
-          <li className="flex flex-col gap-1.5">
+          <li className="lg:flex lg:flex-col lg:gap-1.5">
             <h1 href="contact me" className="font-bold">
               CONTACT ME
             </h1>
@@ -34,10 +36,10 @@ class Footer extends Component {
             </a>
             <a href="">+57 3195619977</a>
           </li>
-          <li className="grid grid-cols-3 content-center">
-            <img src={Twitter} className="h-5 px-1" alt="" />
-            <img src={Instagram} className="h-5 px-1" alt="" />
-            <img src={Linkedin} className="h-5 px-1" alt="" />
+          <li className="lg:grid lg:grid-cols-3 lg:content-center gap-2">
+            <img src={Twitter} className="" alt="" />
+            <img src={Instagram} className="" alt="" />
+            <img src={Linkedin} className="" alt="" />
           </li>
         </ul>
       </footer>

@@ -8,21 +8,21 @@ import "../../index.css";
 class Header extends Component {
   render() {
     return (
-      <header className="flex flex justify-between h-16 my-5 py-2 items-end">
-        <figure className="">
+      <header className="flex flex-col items-center lg:flex-row lg:justify-between">
+        <figure className="p-3">
           <img src={logo} alt="" className="w-40" />
         </figure>
-        <ul className="flex gap-11 text-softblue-350 font-body text-base font-medium">
+        <ul className="flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-11 font-body text-base font-medium">
           {MenuItems.map((item, index) => {
             return (
-              <li key={index} className="active:text-white active:underline">
+              <li key={index} className="">
                 <a className={MenuItems.cName} href={item.url}>
                   {item.title}
                 </a>
               </li>
             );
           })}
-          <li className="flex gap-1.5">
+          <li className="flex items-center justify-center gap-2">
             <button>
               <img src={colombia} className="w-4" alt="" />
             </button>
