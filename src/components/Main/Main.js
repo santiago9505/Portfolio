@@ -40,11 +40,11 @@ class Header extends Component {
           <figure className="lg:absolute lg:bottom-20 lg:left-0">
             <img src={Rectangulo} className="lg:w-full lg:h-28" alt="" />
           </figure>
-          <section className="grid grid-cols-3 ml-10 gap-2 text-white items-center justify-items-center text-center lg:grid-cols-12 lg:gap-2 lg:h-24 lg:absolute lg:bottom-20 lg:left-0 lg:mx-32 lg:text-center lg:font-body lg:font-medium lg:text-blue-450 lg:text-xs">
+          <section className="grid grid-cols-3 ml-10 gap-2 text-white items-center justify-items-center text-center lg:grid-cols-12 lg:gap-2 lg:absolute lg:bottom-24 lg:left-0 lg:mx-32 lg:font-body lg:font-medium lg:text-blue-450 lg:text-xs lg:items-start">
             <figure className="items-center">
               <img
                 src={Management}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
               <figcaption className="">Project Management</figcaption>
@@ -52,7 +52,7 @@ class Header extends Component {
             <figure className="items-center">
               <img
                 src={Data}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
               <figcaption className="">
@@ -62,7 +62,7 @@ class Header extends Component {
             <figure className="">
               <img
                 src={Finance}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
               <figcaption className="">Finance</figcaption>
@@ -70,36 +70,36 @@ class Header extends Component {
             <figure className="">
               <img
                 src={Html}
-                className="w-14 hover:animate-bounce lg:m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Css}
-                className="w-14 hover:animate-bounce lg:m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Js}
-                className="w-14 hover:animate-bounce lg:m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
             </figure>
             <figure className="">
               <img
                 src={Bootstrap}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-3"
                 alt=""
               />
               <figcaption className="">Bootstrap</figcaption>
             </figure>
-            <figure className="">
+            <figure className="lg:pt-3">
               <img
                 src={Node}
-                className="w-14 hover:animate-bounce lg:m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto lg:py-3"
                 alt=""
               />
               <figcaption className="">Node.js</figcaption>
@@ -107,23 +107,23 @@ class Header extends Component {
             <figure className="">
               <img
                 src={Python}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-11 hover:animate-bounce lg:m-auto lg:py-3"
                 alt=""
               />
               <figcaption className="">Python</figcaption>
             </figure>
-            <figure className="">
+            <figure className="lg:pt-1">
               <img
                 src={Reactjs}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-3"
                 alt=""
               />
               <figcaption className="">React.js</figcaption>
             </figure>
-            <figure className="">
+            <figure className="lg:pt-3">
               <img
                 src={Tailwind}
-                className="w-14 hover:animate-bounce lg:m-auto"
+                className="w-14 hover:animate-bounce lg:m-auto lg:py-3"
                 alt=""
               />
               <figcaption className="">Tailwind</figcaption>
@@ -131,7 +131,7 @@ class Header extends Component {
             <figure className="">
               <img
                 src={Maths}
-                className="w-12 hover:animate-bounce lg:m-auto"
+                className="w-12 hover:animate-bounce lg:m-auto lg:py-2"
                 alt=""
               />
               <figcaption className="">Discrete Mathematics</figcaption>

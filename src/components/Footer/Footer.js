@@ -6,8 +6,8 @@ import Linkedin from "../../assets/static/linkedin.png";
 class Footer extends Component {
   render() {
     return (
-      <footer className="text-center text-white py-20 lg:bg-white lg:text-blue-450 lg:flex lg:px-32 lg:pt-2 lg:w-screen lg:h-20 lg:justify-center lg:absolute lg:bottom-0 lg:left-0 lg:gap-40 lg:items-center lg:py-0">
-        <section className="h-40 flex flex-col justify-center lg:text-xs lg:text-center">
+      <footer className="text-center text-white py-20 lg:bg-white lg:text-blue-450 lg:flex lg:px-32 lg:pt-2 lg:w-screen lg:h-20 lg:justify-center lg:absolute lg:bottom-0 lg:left-0 lg:gap-40 lg:items-center lg:py-0 2xl:left-0">
+        <section className="h-40 flex flex-col justify-center lg:h-10 lg:text-xs lg:text-center">
           <h1>© Santiago Guáqueta Angarita 2021</h1>
           <a href="" className="">
             Designed by: Oscar Castro
@@ -31,15 +31,15 @@ class Footer extends Component {
             <h1 href="contact me" className="font-bold">
               CONTACT ME
             </h1>
-            <a href="" className="">
+            <a href=" mailto:santigeek@hotmail.com" className="">
               santigeek@hotmail.com
             </a>
-            <a href="">+57 3195619977</a>
+            <a href="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</a>
           </li>
           <li className="lg:grid lg:grid-cols-3 lg:content-center gap-2">
-            <img src={Twitter} className="" alt="" />
-            <img src={Instagram} className="" alt="" />
-            <img src={Linkedin} className="" alt="" />
+            <img src={Twitter} className="lg:w-6" alt="" />
+            <img src={Instagram} className="lg:w-6" alt="" />
+            <img src={Linkedin} className="lg:w-6" alt="" />
           </li>
         </ul>
       </footer>

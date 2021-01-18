@@ -8,14 +8,14 @@ import "../../index.css";
 class Header extends Component {
   render() {
     return (
-      <header className="flex flex-col items-center lg:flex-row lg:justify-between">
+      <header className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-end">
         <figure className="p-3">
           <img src={logo} alt="" className="w-40" />
         </figure>
         <ul className="flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-11 font-body text-base font-medium">
           {MenuItems.map((item, index) => {
             return (
-              <li key={index} className="">
+              <li key={index} className="active:text-white active:underline">
                 <a className={MenuItems.cName} href={item.url}>
                   {item.title}
                 </a>
