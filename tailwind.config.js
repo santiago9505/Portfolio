@@ -7,6 +7,7 @@ module.exports = {
         },
         softblue: {
           350: "#99AECC",
+          400: "#3475cf",
           500: "#5884C3",
         },
         red: {

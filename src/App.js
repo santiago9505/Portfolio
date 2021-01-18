@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer.js";
 import Main from "./components/Main/Main.js";
 import About from "./components/About/About.js";
 import Projects from "./components/Projects/Projects.js";
+import Contact from "./components/Contact/Contact";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -20,7 +21,10 @@ function App() {
             <Projects />
           </Route>
           <Route path="/contactme">
-            <h1>mi celular</h1>
+            <Contact />
+          </Route>
+          <Route path="/home">
+            <Main />
           </Route>
           <Route path="/">
             <Main />

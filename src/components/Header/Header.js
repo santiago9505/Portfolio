@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "./../../assets/static/logodark.png";
 import colombia from "./../../assets/static/colombian-flag.png";
@@ -15,10 +22,10 @@ class Header extends Component {
         <ul className="flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-11 font-body text-base font-medium">
           {MenuItems.map((item, index) => {
             return (
-              <li key={index} className="active:text-white active:underline">
-                <a className={MenuItems.cName} href={item.url}>
+              <li key={index}>
+                <NavLink activeClassName={item.cName} to={item.url}>
                   {item.title}
-                </a>
+                </NavLink>
               </li>
             );
           })}

@@ -10,7 +10,7 @@ class About extends Component {
             Who I am?
           </h1>
           <p className="pb-2">
-            Hello everyone, my name is <strong> </strong>
+            Hello everyone, my name is{" "}
             <strong className="text-2xl text-softblue-500">
               Santiago Guáqueta
             </strong>
@@ -28,8 +28,9 @@ class About extends Component {
           <p>
             When I was working in the administrative area, I saw the need to
             help people with disabilities to get a job, so I set out to learn
-            how to program a web page with accessibility. Although it was a very
-            simple page, this made me understand that the <strong> </strong>
+            how to develope a web page with accessibility. Although it was a
+            very simple page, this made me understand that the{" "}
+            <strong> </strong>
             <strong className="text-xl text-softblue-350">
               solutions for today's world are based on technology.
             </strong>

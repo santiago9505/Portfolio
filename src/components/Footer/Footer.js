@@ -9,9 +9,15 @@ class Footer extends Component {
       <footer className="text-center text-white py-20 lg:bg-white lg:text-blue-450 lg:flex lg:px-32 lg:pt-2 lg:w-screen lg:h-20 lg:justify-center lg:absolute lg:bottom-0 lg:left-0 lg:gap-40 lg:items-center lg:py-0 2xl:left-0">
         <section className="h-40 flex flex-col justify-center lg:h-10 lg:text-xs lg:text-center">
           <h1>© Santiago Guáqueta Angarita 2021</h1>
-          <a href="" className="">
-            Designed by: Oscar Castro
-          </a>
+          <h1>
+            Designed by:{" "}
+            <a
+              className="text-softblue-500"
+              href="https://www.behance.net/castroscar"
+            >
+              Oscar Castro
+            </a>
+          </h1>
         </section>
 
         <ul className="lg:flex lg:gap-32  lg:font-body lg:text-xs lg:font-medium">
@@ -36,10 +42,10 @@ class Footer extends Component {
             </a>
             <a href="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</a>
           </li>
-          <li className="lg:grid lg:grid-cols-3 lg:content-center gap-2">
-            <img src={Twitter} className="lg:w-6" alt="" />
-            <img src={Instagram} className="lg:w-6" alt="" />
-            <img src={Linkedin} className="lg:w-6" alt="" />
+          <li className="lg:grid lg:grid-cols-3 lg:content-center gap-4">
+            <img src={Twitter} className="lg:w-5" alt="" />
+            <img src={Instagram} className="lg:w-5" alt="" />
+            <img src={Linkedin} className="lg:w-5" alt="" />
           </li>
         </ul>
       </footer>
