@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Whatsapp from "../../assets/static/whatsapp.png";
+import Correo from "../../assets/static/correo-electronico.png";
 
 import "../../index.css";
 
@@ -11,7 +13,7 @@ class Contact extends Component {
             CONTACT ME
           </h1>
           <form
-            className="flex flex-col border rounded-b-lg px-8 w-80 bg-white gap-3 pt-3 pb-3"
+            className="flex flex-col border rounded-b-lg px-8 w-80 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm"
             action=""
           >
             <label htmlFor="" className="flex flex-col">
@@ -40,8 +42,13 @@ class Contact extends Component {
           <h1 className="text-3xl text-softblue-500 font-semibold">
             Let's Work Together!
           </h1>
-          <h2>santigeek@hotmail.com</h2>
-          <h2>+57 3195619977</h2>
+          <h2 className="flex gap-2">
+            <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
+            santigeek@hotmail.com
+          </h2>
+          <h2 className="flex gap-2">
+            <img src={Correo} className="w-8 h-8" alt="" /> +57 3195619977
+          </h2>
         </article>
       </main>
     );

@@ -6,21 +6,14 @@ class About extends Component {
   render() {
     return (
       <main className="lg:grid lg:grid-cols-2 text-white font-body font-medium h-auto lg:py-16 text-md text-justify">
-        <article className="grid grid-rows-2 gap-6 justify-items-center">
+        <article className="items-center pt-2">
           <iframe
-            className="w-80 h-40 hover:animate-pulse bg-gray-500"
+            className="w-full h-72"
             src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2FSENADistritoCapital%2Fvideos%2F396933551659643%2F&show_text=false&width=840"
             frameborder="0"
           ></iframe>
-          <a href="https://apebogota.com">
-            <img
-              className="w-80 h-40 hover:animate-pulse"
-              src={apebogota}
-              alt=""
-            />
-          </a>
         </article>
-        <article className="border-l-2 pl-4">
+        <article className="border-l-2 pl-4 ml-3">
           <h1 className="text-softblue-350 text-4xl pb-4 font-semibold">
             Experience
           </h1>

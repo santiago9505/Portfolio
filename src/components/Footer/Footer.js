@@ -43,9 +43,15 @@ class Footer extends Component {
             <a href="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</a>
           </li>
           <li className="lg:grid lg:grid-cols-3 lg:content-center gap-4">
-            <img src={Twitter} className="lg:w-5" alt="" />
-            <img src={Instagram} className="lg:w-5" alt="" />
-            <img src={Linkedin} className="lg:w-5" alt="" />
+            <a href="https://twitter.com/santigeek">
+              <img src={Twitter} className="lg:w-5" alt="" />
+            </a>
+            <a href="https://www.instagram.com/santigeek22/">
+              <img src={Instagram} className="lg:w-5" alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/santiago-gu%C3%A1queta-a7522b132/">
+              <img src={Linkedin} className="lg:w-5" alt="" />
+            </a>
           </li>
         </ul>
       </footer>

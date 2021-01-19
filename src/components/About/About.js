@@ -14,15 +14,15 @@ class About extends Component {
             <strong className="text-2xl text-softblue-500">
               Santiago Guáqueta
             </strong>
-            , <br /> I am a business administrator and a lover of technology.
+            , <br /> I am a business administrator and tech lover.
           </p>
           <p className="pb-2">
             You're probably wondering what business administration has to do
             with software programming, and the answer is everything. At present
-            we cannot think of a sustainable company without the use of
-            technology. And that's why I'm here. <strong> </strong>
+            we cannot think of a sustainable company without tecnologycs use.
+            And that's why I'm here. <strong> </strong>
             <strong className="text-2xl text-softblue-350">
-              Looking to jump into the world of IT.
+              Looking to jump into the IT's world.
             </strong>
           </p>
           <p>
