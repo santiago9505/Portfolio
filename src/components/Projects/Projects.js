@@ -37,7 +37,7 @@ class About extends Component {
               apebogota.com
             </a>{" "}
             a place for People with Disabilities, which allows finding available
-            job vacancies in the city of Bogotá.
+            job vacancies in Bogotá city.
           </p>
         </article>
       </main>

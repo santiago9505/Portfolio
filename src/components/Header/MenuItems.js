@@ -10,9 +10,9 @@ export const MenuItems = [
     url: "/aboutme",
   },
   {
-    title: "PROJECTS",
+    title: "EXPERIENCE",
     cName: "text-white underline",
-    url: "projects",
+    url: "experience",
   },
   {
     title: "CONTACT ME",

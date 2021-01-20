@@ -11,11 +11,8 @@ class Footer extends Component {
           <h1>© Santiago Guáqueta Angarita 2021</h1>
           <h1>
             Designed by:{" "}
-            <a
-              className="text-softblue-500"
-              href="https://www.behance.net/castroscar"
-            >
-              Oscar Castro
+            <a className="" href="https://www.behance.net/castroscar">
+              <strong>Oscar Castro</strong>
             </a>
           </h1>
         </section>
