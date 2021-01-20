@@ -10,7 +10,7 @@ class Contact extends Component {
       <main className="grid grid-cols-2 pt-10">
         <div className="border-l-2 pl-12">
           <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-80 h-12 pb-0 m-0 pt-2">
-            CONTACT ME
+            CONTACT ME(Not ready yet)
           </h1>
           <form
             className="flex flex-col border rounded-b-lg px-8 w-80 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm"
