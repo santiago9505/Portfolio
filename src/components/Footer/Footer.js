@@ -22,7 +22,7 @@ class Footer extends Component {
             <h1 href="#content" className="font-bold">
               CONTENT
             </h1>
-            <a href="">Blog</a>
+            <a href="apebogota.com">Blog</a>
           </li>
           <li className="lg:flex lg:flex-col lg:gap-1.5">
             <h1 href="courses" className="font-bold">

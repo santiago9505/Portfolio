@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "./../../assets/static/logodark.png";
 import colombia from "./../../assets/static/colombian-flag.png";

@@ -5,6 +5,30 @@ import Correo from "../../assets/static/correo-electronico.png";
 import "../../index.css";
 
 class Contact extends Component {
+  state = {
+    email: "sherlockhomes@gmail.com",
+  };
+
+  handleChange = (e) => {
+    // console.log({
+    //   name: e.target.name,
+    //   value: e.target.value,
+    // });
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  handleClick = (e) => {
+    console.log("Button was clicked");
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form was submitted");
+    console.log(this.state);
+  };
+
   render() {
     return (
       <main className="grid grid-cols-2 pt-10">
@@ -13,26 +37,52 @@ class Contact extends Component {
             CONTACT ME
           </h1>
           <form
+            onSubmit={this.handleSubmit}
             className="flex flex-col border rounded-b-lg px-8 w-80 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm"
             action=""
           >
             <label htmlFor="" className="flex flex-col">
               <span>Name</span>
-              <input className="bg-gray-100" type="text" name="" id="" />
+              <input
+                onChange={this.handleChange}
+                className="bg-gray-100"
+                type="text"
+                name="firstName"
+                value={this.state.firstName}
+              />
             </label>
             <label htmlFor="" className="flex flex-col">
               <span>Last Name</span>
-              <input className="bg-gray-100" type="text" name="" id="" />
+              <input
+                onChange={this.handleChange}
+                className="bg-gray-100"
+                type="text"
+                name="lastName"
+                value={this.state.lastName}
+              />
             </label>
             <label htmlFor="" className="flex flex-col">
               <span>Email</span>
-              <input className="bg-gray-100" type="text" name="" id="" />
+              <input
+                onChange={this.handleChange}
+                className="bg-gray-100"
+                type="email"
+                name="email"
+                value={this.state.email}
+              />
             </label>
             <label htmlFor="" className="flex flex-col">
               <span>Message</span>
-              <input className="h-20 bg-gray-100" type="text" name="" id="" />
+              <input
+                onChange={this.handleChange}
+                className="h-20 bg-gray-100"
+                type="text"
+                name="message"
+                value={this.state.message}
+              />
             </label>
             <input
+              onClick={this.handleClick}
               className="bg-softblue-500 rounded-md self-end h-8 w-24 text-white font-body font-semibold"
               type="submit"
             />

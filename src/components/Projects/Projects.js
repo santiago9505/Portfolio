@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../index.css";
-import apebogota from "../../assets/static/apebogota.PNG";
 
 class About extends Component {
   render() {
