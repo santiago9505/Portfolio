@@ -10,7 +10,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-blue-450 lg:px-32 lg:h-screen">
+    <div
+      className="bg-blue-450 flex flex-col h-auto static lg:relative
+     w-screen lg:px-32 lg:h-screen"
+    >
       <Router>
         <Header />
         <Switch>

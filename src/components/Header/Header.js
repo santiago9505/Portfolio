@@ -10,10 +10,10 @@ class Header extends Component {
   render() {
     return (
       <header className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-end">
-        <figure className="p-3">
+        <figure className="p-6">
           <img src={logo} alt="" className="w-40" />
         </figure>
-        <ul className="flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-11 font-body text-base font-medium">
+        <ul className="flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium">
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
