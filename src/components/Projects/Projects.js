@@ -5,9 +5,9 @@ class About extends Component {
   render() {
     return (
       <main className="flex flex-col lg:grid lg:grid-cols-2 text-white font-body font-medium h-auto lg:py-14 text-md text-justify">
-        <article className="items-center pt-14 lg:pt-0">
+        <article className="items-center h-32 py-4 py-0 flex mt-28 mb-10">
           <iframe
-            className="w-full h-96 lg:h-full mb-8 2xl:pt-6"
+            className="w-full h-96 lg:h-full mb-8 2xl:pt-6 py-20"
             src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2FSENADistritoCapital%2Fvideos%2F396933551659643%2F&show_text=false&width=840"
             frameborder="0"
           ></iframe>
@@ -16,7 +16,7 @@ class About extends Component {
           <h1 className="text-softblue-350 text-4xl pb-4 font-semibold 2xl:text-6xl">
             Experience
           </h1>
-          <p className="py-4">
+          <p className="py-2">
             Experienced in{" "}
             <strong className="text-softblue-500 text-xl 2xl:text-5xl">
               customer service

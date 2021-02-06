@@ -32,13 +32,13 @@ class Contact extends Component {
   render() {
     return (
       <main className="grid grid-cols-auto lg:grid-cols-2 pt-10 justify-center mb-10">
-        <div className="border-l-2 pl-6 lg:pl-10">
-          <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-80 h-12 pb-0 m-0 pt-2">
+        <div className="border-l-2 ml-8 pl-8">
+          <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-9/12 h-12 pb-0 pt-2 md:w-5/6">
             CONTACT ME
           </h1>
           <form
             onSubmit={this.handleSubmit}
-            className="flex flex-col border rounded-b-lg px-8 w-80 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm"
+            className="flex flex-col border rounded-b-lg px-8 w-9/12 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm md:w-5/6"
             action=""
           >
             <label htmlFor="" className="flex flex-col">
@@ -88,7 +88,7 @@ class Contact extends Component {
             />
           </form>
         </div>
-        <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 text-xl">
+        <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 mx-5 text-lg">
           <h1 className="text-3xl text-softblue-500 font-semibold">
             Let's Work Together!
           </h1>
