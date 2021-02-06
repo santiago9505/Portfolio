@@ -12,7 +12,7 @@ function App() {
   return (
     <div
       className="bg-blue-450 flex flex-col h-auto static lg:relative
-     w-screen lg:px-32 lg:h-screen"
+     w-screen lg:px-16 lg:h-screen xl:px-32"
     >
       <Router>
         <Header />

@@ -4,28 +4,28 @@ import "../../index.css";
 class About extends Component {
   render() {
     return (
-      <main className="lg:grid lg:grid-cols-2 text-white font-body font-medium h-auto py-10 text-md text-justify">
-        <article className="border-l-2 pl-6">
-          <h1 className="text-softblue-350 text-4xl pb-4 font-semibold">
-            Who I am?
+      <main className="lg:grid lg:grid-cols-1 w-full text-white font-body font-medium h-auto py-10 text-md text-justify">
+        <article className="border-l-2 px-8 lg:px-6 lg:w-2/3">
+          <h1 className="text-softblue-350 text-4xl pb-4 lg:pb-2 font-semibold md:text-5xl">
+            Who am I?
           </h1>
-          <p className="pb-2">
+          <p className="pb-2 md:text-xl">
             Hello everyone, my name is{" "}
-            <strong className="text-2xl text-softblue-500">
-              Santiago Guáqueta
+            <strong className="text-2xl text-softblue-500 md:text-3xl">
+              Santiago Guáqueta.
             </strong>
-            , <br /> I am a business administrator and tech lover.
+            {""} I am a business administrator and tech lover.
           </p>
-          <p className="pb-2">
+          <p className="pb-2 md:text-xl">
             You're probably wondering what business administration has to do
             with software programming, and the answer is everything. At present
             we cannot think of a sustainable company without tecnologycs use.
             And that's why I'm here. <strong> </strong>
-            <strong className="text-2xl text-softblue-350">
+            <strong className="text-2xl text-softblue-350 md:text-xl">
               Looking to jump into the IT's world.
             </strong>
           </p>
-          <p>
+          <p className="md:text-xl">
             When I was working in the administrative area, I saw the need to
             help people with disabilities to get a job, so I set out to learn
             how to develope a web page with accessibility. Although it was a

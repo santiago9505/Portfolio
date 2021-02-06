@@ -6,7 +6,7 @@ import "../../index.css";
 
 class Contact extends Component {
   state = {
-    email: "sherlockhomes@gmail.com",
+    email: "",
   };
 
   handleChange = (e) => {
@@ -31,8 +31,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <main className="grid grid-cols-2 pt-10">
-        <div className="border-l-2 pl-12">
+      <main className="grid grid-cols-auto lg:grid-cols-2 pt-10 justify-center mb-10">
+        <div className="border-l-2 pl-6 lg:pl-10">
           <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-80 h-12 pb-0 m-0 pt-2">
             CONTACT ME
           </h1>
@@ -88,16 +88,19 @@ class Contact extends Component {
             />
           </form>
         </div>
-        <article className="flex flex-col pl-10 font-body font-medium text-white pt-20 gap-4 text-xl">
+        <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 text-xl">
           <h1 className="text-3xl text-softblue-500 font-semibold">
             Let's Work Together!
           </h1>
           <h2 className="flex gap-2">
-            <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
-            santigeek@hotmail.com
+            <img src={Correo} className="w-8 h-8" alt="" />{" "}
+            <a href="" className="pl-2">
+              santigeek@hotmail.com
+            </a>
           </h2>
           <h2 className="flex gap-2">
-            <img src={Correo} className="w-8 h-8" alt="" /> +57 3195619977
+            <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
+            <a href="">+57 3195619977</a>
           </h2>
         </article>
       </main>
