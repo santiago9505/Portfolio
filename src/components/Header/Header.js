@@ -26,11 +26,21 @@ class Header extends Component {
           })}
           <li className="flex items-center justify-center gap-2 2xl:gap-4 3xl:gap-5">
             <button>
-              <img src={colombia} className="w-4 2xl:w-8 3xl:w-9" alt="" />
+              <img
+                src={colombia}
+                className="w-4 2xl:w-8 3xl:w-9"
+                alt=""
+                onClick={this.spanishClick}
+              />
             </button>
             <h1>|</h1>
             <button>
-              <img src={usa} className="w-4 2xl:w-8 3xl:9" alt="" />
+              <img
+                src={usa}
+                className="w-4 2xl:w-8 3xl:9"
+                alt=""
+                onClick={this.englishClick}
+              />
             </button>
           </li>
         </ul>
