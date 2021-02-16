@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { MenuItems } from "./MenuItems";
 import logo from "./../../assets/static/logodark.png";
 import colombia from "./../../assets/static/colombian-flag.png";
 import usa from "./../../assets/static/usa-flag.png";
 import "../../index.css";
+import { useTranslation } from "react-i18next";
+import { MenuItems } from "./MenuItems";
 
 class Header extends Component {
   render() {

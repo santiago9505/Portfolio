@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
     extend: {
+      darkMode: "media",
       screens: {
         "3xl": "2034px",
       },

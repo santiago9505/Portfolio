@@ -5,8 +5,8 @@ import "../../index.css";
 class About extends Component {
   render() {
     return (
-      <main className="flex flex-col text-white font-body font-medium h-auto text-md text-justify lg:grid lg:grid-cols-2 lg:pt-8">
-        <article className="items-center h-96 py-4 py-0 flex mt-28 mb-10 lg:h-96 lg:mt-0 3xl:h-9/7 3xl:pt-16">
+      <main className="flex flex-col text-white font-body font-medium h-auto text-md tracking-tighter text-justify lg:grid lg:grid-cols-2 lg:pt-8 lg:tracking-normal dark:bg-gray-800">
+        <article className="items-center h-80 py-4 py-0 flex mt-28 mb-10 lg:h-96 lg:mt-0 3xl:h-9/7 3xl:pt-16">
           <iframe
             src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSENADistritoCapital%2Fvideos%2F396933551659643%2F&show_text=false&width=560"
             className="w-full h-full 3xl:h-9/7"

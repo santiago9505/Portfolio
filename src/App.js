@@ -5,7 +5,6 @@ import Main from "./components/Main/Main.js";
 import About from "./components/About/About.js";
 import Projects from "./components/Projects/Projects.js";
 import Contact from "./components/Contact/Contact";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {

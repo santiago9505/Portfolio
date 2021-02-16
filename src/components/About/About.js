@@ -4,7 +4,7 @@ import "../../index.css";
 class About extends Component {
   render() {
     return (
-      <main className="w-full text-white font-body font-medium h-auto py-10 text-md text-justify lg:grid lg:grid-cols-2">
+      <main className="w-full text-justify tracking-tighter text-white font-body font-medium h-auto py-10 text-md lg:grid lg:grid-cols-2">
         <article className="border-l-2 px-8 mx-4 lg:px-6 lg:mt-0">
           <h1 className="text-softblue-350 font-semibold text-4xl pb-4 md:text-3xl lg:text-2xl lg:pb-2 xl:text-3xl 2xl:text-4xl 3xl:text-6xl">
             Who am I?
@@ -13,7 +13,7 @@ class About extends Component {
             Hello everyone, my name is{" "}
             <strong className="text-2xl text-softblue-500 md:text-2xl lg:text-lg 2xl:text-xl 3xl:text-3xl">
               Santiago Guáqueta.
-            </strong>
+            </strong>{" "}
             {""} I am a business administrator and tech lover.
           </p>
           <p className="pb-2 md:text-lg lg:text-sm xl:text-base 2xl:text-lg 3xl:text-2xl 3xl:py-2">
