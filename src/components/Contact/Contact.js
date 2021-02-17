@@ -32,8 +32,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <main className="grid grid-cols-auto lg:grid-cols-2 pt-10 justify-center mb-10 2xl:pt-8 bg-green-500">
-        <div className="border-l-2 ml-8 pl-4 xl:h-full bg-yellow-500">
+      <main className="grid grid-cols-auto lg:grid-cols-2 pt-10 justify-center mb-10 2xl:pt-8">
+        <div className="border-l-2 ml-8 pl-4 xl:h-full">
           <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4">
             CONTACT ME
           </h1>
