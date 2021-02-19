@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../index.css";
+import Triangle from "../../assets/static/triangle.png";
 
 class About extends Component {
   render() {
@@ -35,6 +36,23 @@ class About extends Component {
               solutions for today's world are based on technology.
             </strong>
           </p>
+        </article>
+        <article className="">
+          <img
+            src={Triangle}
+            className="absolute opacity-75 top-40 -right-1 origin-center transform -rotate-90 hidden lg:flex 2xl:w-40 2xl:top-60"
+            alt=""
+          />
+          <img
+            src={Triangle}
+            className="w-40 opacity-25 absolute origin-center right-24 transform -rotate-45 bottom-36 hidden lg:flex 2xl:w-60 2xl:bottom-48"
+            alt=""
+          />
+          <img
+            src={Triangle}
+            className="opacity-40 origin-center right-96 bottom-48 w-32 hidden lg:flex mt-60 ml-36 2xl:mt-72 2xl:w-48"
+            alt=""
+          />
         </article>
       </main>
     );

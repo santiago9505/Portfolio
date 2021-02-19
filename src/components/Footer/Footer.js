@@ -43,21 +43,21 @@ class Footer extends Component {
             <a href="https://twitter.com/santigeek">
               <img
                 src={Twitter}
-                className="w-8 lg:w-5 2xl:w-8 3xl:w-12"
+                className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
                 alt=""
               />
             </a>
             <a href="https://www.instagram.com/santigeek22/">
               <img
                 src={Instagram}
-                className="w-8 lg:w-5 2xl:w-8 3xl:w-12"
+                className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
                 alt=""
               />
             </a>
             <a href="https://www.linkedin.com/in/santiago-gu%C3%A1queta-a7522b132/">
               <img
                 src={Linkedin}
-                className="w-8 lg:w-5 2xl:w-8 3xl:w-12"
+                className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
                 alt=""
               />
             </a>

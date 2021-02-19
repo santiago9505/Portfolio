@@ -1,112 +1,127 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Whatsapp from "../../assets/static/whatsapp.png";
 import Correo from "../../assets/static/correo-electronico.png";
 
 import "../../index.css";
 import { Link } from "react-router-dom";
+import { db } from "../../firebase";
 
-class Contact extends Component {
-  state = {
-    email: "",
-  };
+const Contact = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  handleChange = (e) => {
-    // console.log({
-    //   name: e.target.name,
-    //   value: e.target.value,
-    // });
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [loader, setLoader] = useState(false);
 
-  handleClick = (e) => {
-    console.log("Button was clicked");
-  };
-
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form was submitted");
-    console.log(this.state);
+    setLoader(true);
+
+    db.collection("contacts")
+      .add({
+        name: name,
+        lastName: lastName,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        alert("Thanks, your message has been submitted");
+        setLoader(false);
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
   };
 
-  render() {
-    return (
-      <main className="grid grid-cols-auto lg:grid-cols-2 pt-10 justify-center mb-10 2xl:pt-8">
-        <div className="border-l-2 ml-8 pl-4 xl:h-full">
-          <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4">
-            CONTACT ME
-          </h1>
-          <form
-            onSubmit={this.handleSubmit}
-            className="flex flex-col border rounded-b-lg px-8 w-11/12 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:h-full 2xl:text-xl"
-            action=""
-          >
-            <label htmlFor="" className="flex flex-col">
-              <span>Name</span>
-              <input
-                onChange={this.handleChange}
-                className="bg-gray-100"
-                type="text"
-                name="firstName"
-                value={this.state.firstName}
-              />
-            </label>
-            <label htmlFor="" className="flex flex-col">
-              <span>Last Name</span>
-              <input
-                onChange={this.handleChange}
-                className="bg-gray-100"
-                type="text"
-                name="lastName"
-                value={this.state.lastName}
-              />
-            </label>
-            <label htmlFor="" className="flex flex-col">
-              <span>Email</span>
-              <input
-                onChange={this.handleChange}
-                className="bg-gray-100"
-                type="email"
-                name="email"
-                value={this.state.email}
-              />
-            </label>
-            <label htmlFor="" className="flex flex-col">
-              <span>Message</span>
-              <input
-                onChange={this.handleChange}
-                className="h-20 bg-gray-100"
-                type="text"
-                name="message"
-                value={this.state.message}
-              />
-            </label>
+  return (
+    <main className="grid grid-cols-auto lg:grid-cols-2 pt-8 justify-center mb-10 2xl:pt-8">
+      <div className="border-l-2 ml-8 pl-4 xl:h-full">
+        <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4">
+          CONTACT ME
+        </h1>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col border rounded-b-lg px-8 w-11/12 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm md:w-5/6 md:max-w-xs lg:pt-2 2xl:max-w-sm 2xl:h-full 2xl:text-xl"
+          action=""
+        >
+          <label htmlFor="" className="flex flex-col">
+            <span className="p-1">Name</span>
             <input
-              onClick={this.handleClick}
-              className="bg-softblue-500 rounded-md self-end h-8 w-24 text-white font-body font-semibold"
-              type="submit"
+              placeholder="Jhon"
+              onChange={(e) => setName(e.target.value)}
+              className="bg-gray-100 text-sm px-1 text-softblue-500 font-body font-medium"
+              type="text"
+              name="firstName"
+              value={name}
             />
-          </form>
-        </div>
-        <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 mx-5 text-lg 2xl:text-2xl">
-          <h1 className="text-3xl text-softblue-500 font-semibold 2xl:text-4xl">
-            Let's Work Together!
-          </h1>
-          <h2 className="flex gap-2">
-            <img src={Correo} className="w-8 h-8" alt="" />{" "}
-            <Link href="" className="pl-2">
-              santigeek@hotmail.com
-            </Link>
-          </h2>
-          <h2 className="flex gap-2">
-            <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
-            <Link href="">+57 3195619977</Link>
-          </h2>
-        </article>
-      </main>
-    );
-  }
-}
+          </label>
+          <label htmlFor="" className="flex flex-col">
+            <span className="p-1">Last Name</span>
+            <input
+              placeholder="Katzenbach"
+              onChange={(e) => setLastName(e.target.value)}
+              className="bg-gray-100 text-sm px-1 text-softblue-500 font-body font-medium"
+              type="text"
+              name="lastName"
+              value={lastName}
+            />
+          </label>
+          <label htmlFor="" className="flex flex-col">
+            <span className="p-1">Email</span>
+            <input
+              placeholder="psicoanalista@gmail.com"
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-gray-100 text-sm px-1 text-softblue-500 font-body font-medium"
+              type="email"
+              name="email"
+              value={email}
+            />
+          </label>
+          <label htmlFor="" className="flex flex-col">
+            <span className="p-1">Message</span>
+            <textarea
+              placeholder="Hello Santiago, let's work together..."
+              onChange={(e) => setMessage(e.target.value)}
+              className="h-20 bg-gray-100 text-sm px-1 text-softblue-500 font-body font-medium"
+              type="text"
+              name="message"
+              value={message}
+            />
+          </label>
+          <button
+            placeholder="Send"
+            className="bg-softblue-500 rounded-md self-end h-8 w-24 text-white font-body font-semibold"
+            type="submit"
+            style={{ background: loader ? "#ccc" : "#3475cf" }}
+          >
+            SEND
+          </button>
+        </form>
+      </div>
+      <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 mx-5 text-lg 2xl:text-2xl">
+        <h1 className="text-3xl text-softblue-500 font-semibold 2xl:text-4xl">
+          Let's Work Together!
+        </h1>
+        <h2 className="flex gap-2">
+          <img src={Correo} className="w-8 h-8" alt="" />{" "}
+          <a href="mailto:santigeek@hotmail.com" className="pl-2">
+            santigeek@hotmail.com
+          </a>
+        </h2>
+        <h2 className="flex gap-2">
+          <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
+          <a href="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</a>
+        </h2>
+      </article>
+    </main>
+  );
+};
 
 export default Contact;

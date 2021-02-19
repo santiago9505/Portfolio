@@ -17,7 +17,7 @@ class About extends Component {
             allowFullScreen="true"
           ></iframe>
         </article>
-        <article className="border-l-2 mb-10 pl-4 px-8 ml-4 mt-6 lg:pt-0 lg:h-4/6 3xl:h-5/6">
+        <article className="mb-10 pl-4 px-8 ml-4 mt-6 lg:pt-0 lg:h-4/6 3xl:h-5/6">
           <h1 className="text-softblue-350 text-4xl pb-4 font-semibold md:3xl xl:text-3xl lg:text-2xl 2xl:text-4xl 3xl:text-6xl">
             Experience
           </h1>
