@@ -36,10 +36,10 @@ function App() {
     "bg-blue-450 flex flex-col h-auto static lg:relative w-screen lg:px-16 lg:h-screen xl:px-32";
   const lyoutLight =
     "bg-blue-200 flex flex-col h-auto static lg:relative w-screen lg:px-16 lg:h-screen xl:px-32";
-  const headerLight =
-    "flex flex-col items-center text-softblue-500 lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
-  const headerDark =
-    "flex flex-col items-center text-softblue-350 lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
+  let headerLight =
+    "flex flex-col items-center hidden text-softblue-500 lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
+  let headerDark =
+    "flex flex-col items-center hidden text-softblue-350 lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
 
   const [darkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(false);

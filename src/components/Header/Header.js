@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import colombia from "./../../assets/static/colombian-flag.png";
 import usa from "./../../assets/static/usa-flag.png";
@@ -9,14 +9,27 @@ import ThemeContext from "../../context/ThemeContext";
 
 const Header = () => {
   const [sourceImg, classUl, underline] = useContext(ThemeContext);
+  const [theme, setTheme] = useState(false);
+
+  const handleClick = () => {
+    setTheme(!theme);
+  };
 
   return (
     <header className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-end 2xl:items-end 2xl:py-2">
       <figure className="p-6 pt-4 2xl:p-10">
         <img src={sourceImg} alt="" className="w-40 2xl:w-52 3xl:w-72" />
       </figure>
-
-      <ul className={classUl}>
+      <button onClick={handleClick} className="items-end my-8 lg:hidden">
+        <img src="https://img.icons8.com/office/40/000000/menu--v3.png" />
+      </button>
+      <ul
+        className={
+          theme
+            ? "flex flex-col items-center text-softblue-350 lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl"
+            : classUl
+        }
+      >
         {MenuItems.map((item, index) => {
           return (
             <li key={index}>
