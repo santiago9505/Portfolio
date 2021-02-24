@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ThemeContext from "./context/ThemeContext";
 import logoDark from "./assets/static/logodark.png";
 import logoLight from "./assets/static/logolight.png";
+import light from "./assets/static/light.png";
+import dark from "./assets/static/dark.png";
 
 function App() {
   const textGeneralDark =
@@ -120,16 +122,13 @@ function App() {
             </ThemeContext.Provider>
           </Route>
         </Switch>
-        <button
-          className={
-            darkMode
-              ? "absolute top-10 left-10 text-sm text-black border-2 p-1 border-red-500"
-              : "absolute top-10 left-10 text-sm text-white border-2 p-1 border-red-500"
-          }
-          type="button"
-          onClick={handleClick}
-        >
-          {darkMode ? "Dark Mode" : "Light Mode"}
+        <button>
+          <img
+            onClick={handleClick}
+            className="absolute top-10 left-10 text-black p-1 border-red-500 w-16"
+            src={darkMode ? light : dark}
+            alt="mode"
+          />
         </button>
         <ThemeContext.Provider
           value={
