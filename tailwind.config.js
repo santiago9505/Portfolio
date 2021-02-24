@@ -6,7 +6,11 @@ module.exports = {
         "3xl": "2034px",
       },
       colors: {
+        darks: {
+          100: "#313335",
+        },
         blue: {
+          200: "#e0e7f0",
           450: "#1E2D42",
         },
         softblue: {

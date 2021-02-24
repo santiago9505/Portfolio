@@ -111,13 +111,13 @@ const Contact = () => {
         </h1>
         <h2 className="flex gap-2">
           <img src={Correo} className="w-8 h-8" alt="" />{" "}
-          <a href="mailto:santigeek@hotmail.com" className="pl-2">
+          <Link to="mailto:santigeek@hotmail.com" className="pl-2">
             santigeek@hotmail.com
-          </a>
+          </Link>
         </h2>
         <h2 className="flex gap-2">
           <img src={Whatsapp} className="w-8 h-8" alt="" />{" "}
-          <a href="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</a>
+          <Link to="https://wa.me/qr/XCYPFO7562ULM1">+57 3195619977</Link>
         </h2>
       </article>
     </main>
