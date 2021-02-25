@@ -1,18 +1,26 @@
 import React, { useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import colombia from "./../../assets/static/colombian-flag.png";
 import usa from "./../../assets/static/usa-flag.png";
 import "../../index.css";
 import { useTranslation } from "react-i18next";
 import { MenuItems } from "./MenuItems";
+import { MenuItems2 } from "./MenuItems";
 import ThemeContext from "../../context/ThemeContext";
+import HamburguerMenu from "../../assets/static/hamburguer-menu.png";
+import HamburguerMenu2 from "../../assets/static/hamburguer-menu2.png";
 
 const Header = () => {
   const [sourceImg, classUl, underline] = useContext(ThemeContext);
   const [theme, setTheme] = useState(false);
+  const [lenguaje, setLenguaje] = useState(false);
 
   const handleClick = () => {
     setTheme(!theme);
+  };
+
+  const lenguajeClick = () => {
+    setLenguaje(!lenguaje);
   };
 
   return (
@@ -20,9 +28,9 @@ const Header = () => {
       <figure className="p-6 pt-4 2xl:p-10">
         <img src={sourceImg} alt="" className="w-40 2xl:w-52 3xl:w-72" />
       </figure>
-      <button onClick={handleClick} className="items-end my-8 lg:hidden">
-        <img src="https://img.icons8.com/office/40/000000/menu--v3.png" />
-      </button>
+      <Link onClick={handleClick} className="items-end my-8 lg:hidden w-8">
+        <img src={theme ? HamburguerMenu2 : HamburguerMenu} alt="" />
+      </Link>
       <ul
         className={
           theme
@@ -30,22 +38,33 @@ const Header = () => {
             : classUl
         }
       >
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <NavLink activeClassName={underline} to={item.url}>
-                {item.title}
-              </NavLink>
-            </li>
-          );
-        })}
+        {lenguaje
+          ? MenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <NavLink activeClassName={underline} to={item.url}>
+                    {item.title}
+                  </NavLink>
+                </li>
+              );
+            })
+          : MenuItems2.map((item, index) => {
+              return (
+                <li key={index}>
+                  <NavLink activeClassName={underline} to={item.url}>
+                    {item.title}
+                  </NavLink>
+                </li>
+              );
+            })}
         <li className="flex items-center justify-center gap-2 2xl:gap-4 3xl:gap-5">
           <button>
-            <img src={colombia} className="w-4 2xl:w-8 3xl:w-9" alt="" />
-          </button>
-          <h1>|</h1>
-          <button>
-            <img src={usa} className="w-4 2xl:w-8 3xl:9" alt="" />
+            <img
+              src={lenguaje ? colombia : usa}
+              onClick={lenguajeClick}
+              className="w-5 2xl:w-9 3xl:w-10"
+              alt=""
+            />
           </button>
         </li>
       </ul>

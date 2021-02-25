@@ -125,7 +125,7 @@ function App() {
         <button>
           <img
             onClick={handleClick}
-            className="absolute top-10 left-10 text-black p-1 border-red-500 w-16"
+            className="absolute top-10 left-4 w-12 text-black p-1 border-red-500 sm:left-16 sm:w-20 lg:w-14 lg:left-6 xl:left-12 xl:w-14"
             src={darkMode ? light : dark}
             alt="mode"
           />

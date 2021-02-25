@@ -22,3 +22,25 @@ export const MenuItems = [
     url: "contactme",
   },
 ];
+export const MenuItems2 = [
+  {
+    title: "INICIO",
+    cName: "text-white underline",
+    url: "/home",
+  },
+  {
+    title: "SOBRE MI",
+    cName: "text-white underline",
+    url: "/aboutme",
+  },
+  {
+    title: "EXPERIENCIA",
+    cName: "text-white underline",
+    url: "experience",
+  },
+  {
+    title: "CONTÁCTAME",
+    cName: "text-white underline",
+    url: "contactme",
+  },
+];
