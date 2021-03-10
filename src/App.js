@@ -15,7 +15,7 @@ import dark from "./assets/static/dark.png";
 
 function App() {
   const textGeneralDark =
-    "w-full text-justify tracking-tighter text-white font-body font-medium h-auto py-10 text-md lg:grid lg:grid-cols-2";
+    "w-full tracking-tighter text-white font-body font-medium h-auto py-10 text-md lg:text-justify lg:grid lg:grid-cols-2";
   const WhoAmIDark =
     "text-softblue-350 font-semibold text-4xl pb-4 md:text-3xl lg:text-2xl lg:pb-2 xl:text-3xl 2xl:text-4xl 3xl:text-6xl";
   const santiagoDark =
@@ -25,7 +25,7 @@ function App() {
   const solutionsDark =
     "md:text-2xl text-softblue-350 lg:text-sm xl:text-base 2xl:text-xl 3xl:text-3xl";
   const textGeneralLight =
-    "w-full text-justify tracking-tighter text-black font-body font-medium h-auto py-10 text-md lg:grid lg:grid-cols-2";
+    "w-full tracking-tighter text-black font-body font-medium h-auto py-10 text-md lg:text-justify lg:grid lg:grid-cols-2";
   const WhoAmILight =
     "text-blue-450 font-semibold text-4xl pb-4 md:text-3xl lg:text-2xl lg:pb-2 xl:text-3xl 2xl:text-4xl 3xl:text-6xl";
   const santiagoLight =
@@ -39,9 +39,25 @@ function App() {
   const lyoutLight =
     "bg-blue-200 flex flex-col h-auto static lg:relative w-screen lg:px-16 lg:h-screen xl:px-32";
   let headerLight =
-    "flex flex-col items-center hidden text-softblue-500 lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
+    "flex flex-col items-center hidden text-black lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
   let headerDark =
     "flex flex-col items-center hidden text-softblue-350 lg:block lg:flex-row lg:flex gap-4 lg:gap-11 font-body text-base font-medium lg:pb-4 2xl:gap-12 2xl:text-2xl 3xl:text-3xl";
+  const classRectanguloLight =
+    "h-0 w-screen lg:w-full lg:h-28 2xl:h-40 3xl:h-60 bg-gray-900";
+  const classRectanguloDark =
+    "h-0 w-screen lg:w-full lg:h-28 2xl:h-40 3xl:h-60";
+  const ExperienceTitleDark =
+    "text-softblue-350 text-4xl pb-4 font-semibold md:3xl xl:text-3xl lg:text-2xl 2xl:text-4xl 3xl:text-6xl";
+  const ExperienceTitleLight =
+    "text-blue-450 text-4xl pb-4 font-semibold md:3xl xl:text-3xl lg:text-2xl 2xl:text-4xl 3xl:text-6xl";
+  const customerServiceDark =
+    "text-softblue-500 text-xl md:text-2xl lg:text-xl xl:text-xl 2xl:text-2xl 3xl:text-4xl";
+  const customerServiceLight =
+    "text-black text-xl md:text-2xl lg:text-xl xl:text-xl 2xl:text-2xl 3xl:text-4xl";
+  const projectTextDark =
+    "flex flex-col text-white font-body font-medium h-auto text-md tracking-tighter lg:text-justify lg:grid lg:grid-cols-2 lg:pt-8 lg:tracking-normal";
+  const projectTextLight =
+    "flex flex-col text-black font-body font-medium h-auto text-md tracking-tighter lg:text-justify lg:grid lg:grid-cols-2 lg:pt-8 lg:tracking-normal";
 
   const [darkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(false);
@@ -78,7 +94,15 @@ function App() {
             </ThemeContext.Provider>
           </Route>
           <Route path="/experience">
-            <Projects />
+            <ThemeContext.Provider
+              value={[
+                theme ? ExperienceTitleLight : ExperienceTitleDark,
+                theme ? customerServiceLight : customerServiceDark,
+                theme ? projectTextLight : projectTextDark,
+              ]}
+            >
+              <Projects />
+            </ThemeContext.Provider>
           </Route>
           <Route path="/contactme">
             <Contact />
@@ -97,6 +121,7 @@ function App() {
                   : "text-white font-semibold 2xl:py-3",
 
                 theme ? "text-blue-450" : "text-white",
+                theme ? classRectanguloLight : classRectanguloDark,
               ]}
             >
               <Main />
@@ -116,6 +141,7 @@ function App() {
                   : "text-white font-semibold 2xl:py-3",
 
                 theme ? "text-blue-450" : "text-white",
+                theme ? classRectanguloLight : classRectanguloDark,
               ]}
             >
               <Main />

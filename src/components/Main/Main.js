@@ -18,7 +18,9 @@ import ThemeContext from "../../context/ThemeContext";
 import "../../index.css";
 
 const Main = () => {
-  const [hello, thisIs, santiago, businessAdmin] = useContext(ThemeContext);
+  const [hello, thisIs, santiago, businessAdmin, classRectangulo] = useContext(
+    ThemeContext
+  );
 
   return (
     <main className="px-4 lg:h-96">
@@ -43,11 +45,7 @@ const Main = () => {
       </section>
       <div className="">
         <figure className="py-8 lg:absolute lg:bottom-20 lg:left-0 lg:py-0 2xl:bottom-36 3xl:bottom-52">
-          <img
-            src={Rectangulo}
-            className="h-0 w-screen lg:w-full lg:h-28 2xl:h-40 3xl:h-60"
-            alt=""
-          />
+          <img src={Rectangulo} className={classRectangulo} alt="" />
         </figure>
         <section className="px-4 py-6 bg-gray-300 mb-6 rounded-lg lg:bg-transparent grid grid-cols-3 justify-items-center gap-4 lg:text-center lg:grid-cols-12 lg:py-1 lg:absolute lg:bottom-14 lg:left-0 lg:w-full lg:px-20 lg:font-body lg:font-medium lg:text-blue-450 lg:text-xs lg:items-start xl:px-32 2xl:bottom-32 3xl:bottom-52 3xl:text-xl">
           <figure className="text-center">
