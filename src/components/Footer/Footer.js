@@ -5,7 +5,7 @@ import Linkedin from "../../assets/static/linkedin.png";
 import ThemeContext from "../../context/ThemeContext.js";
 
 const Footer = () => {
-  const bgfooter = useContext(ThemeContext);
+  const [bgfooter, twitter, instagram, linkedIn] = useContext(ThemeContext);
   return (
     <footer className={bgfooter}>
       <section className="h-40 flex flex-col justify-center lg:inline-block lg:h-10 lg:w-60 lg:mx:10 lg:text-xs lg:text-center 2xl:text-lg 2xl:w-auto 3xl:text-2xl">
@@ -43,21 +43,21 @@ const Footer = () => {
         <li className="flex justify-center gap-2 py-4 lg:grid lg:grid-cols-3 lg:content-center lg:gap-6">
           <a href="https://twitter.com/santigeek">
             <img
-              src={Twitter}
+              src={twitter}
               className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
               alt=""
             />
           </a>
           <a href="https://www.instagram.com/santigeek22/">
             <img
-              src={Instagram}
+              src={instagram}
               className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
               alt=""
             />
           </a>
           <a href="https://www.linkedin.com/in/santiago-gu%C3%A1queta-a7522b132/">
             <img
-              src={Linkedin}
+              src={linkedIn}
               className="w-8 lg:w-6 lg:h-6 2xl:w-8 2xl:h-8 3xl:w-12 3xl:h-12"
               alt=""
             />

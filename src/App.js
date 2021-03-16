@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
 import Main from "./components/Main/Main.js";
@@ -12,6 +12,12 @@ import logoDark from "./assets/static/logodark.png";
 import logoLight from "./assets/static/logolight.png";
 import light from "./assets/static/light.png";
 import dark from "./assets/static/dark.png";
+import TwitterLight from "./assets/static/twitter_2.png";
+import TwitterDark from "./assets/static/twitter.png";
+import InstagramLight from "./assets/static/instagram_2.png";
+import InstagramDark from "./assets/static/instagram.png";
+import LinkedInLight from "./assets/static/linkedin_2.png";
+import LinkedInDark from "./assets/static/linkedin.png";
 
 function App() {
   const textGeneralDark =
@@ -58,6 +64,14 @@ function App() {
     "flex flex-col text-white font-body font-medium h-auto text-md tracking-tighter lg:text-justify lg:grid lg:grid-cols-2 lg:pt-8 lg:tracking-normal";
   const projectTextLight =
     "flex flex-col text-black font-body font-medium h-auto text-md tracking-tighter lg:text-justify lg:grid lg:grid-cols-2 lg:pt-8 lg:tracking-normal";
+  const formTitleDark =
+    "flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 mx-5 text-lg 2xl:text-2xl";
+  const formTitleLight =
+    "flex flex-col px-auto font-body font-medium text-black pt-20 gap-4 mx-5 text-lg 2xl:text-2xl";
+  const textColorContactDark =
+    "border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4";
+  const textColorContactLight =
+    "border-black rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-blue-450 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4";
 
   const [darkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(false);
@@ -105,7 +119,14 @@ function App() {
             </ThemeContext.Provider>
           </Route>
           <Route path="/contactme">
-            <Contact />
+            <ThemeContext.Provider
+              value={[
+                theme ? textColorContactLight : textColorContactDark,
+                theme ? formTitleLight : formTitleDark,
+              ]}
+            >
+              <Contact />
+            </ThemeContext.Provider>
           </Route>
           <Route path="/home">
             <ThemeContext.Provider
@@ -151,17 +172,20 @@ function App() {
         <button>
           <img
             onClick={handleClick}
-            className="absolute top-10 left-4 w-12 text-black p-1 border-red-500 sm:left-16 sm:w-20 lg:w-14 lg:left-6 xl:left-12 xl:w-14"
+            className="absolute top-10 left-4 w-12 rounded-full hover:bg-blue-300 text-black p-1 border-red-500 sm:left-16 sm:w-20 lg:w-14 lg:left-6 xl:left-12 xl:w-14"
             src={darkMode ? light : dark}
             alt="mode"
           />
         </button>
         <ThemeContext.Provider
-          value={
+          value={[
             theme
               ? "w-full h-18 text-center bg-blue-450 text-white lg:absolute lg:bottom-0 lg:left-0 lg:items-center lg:flex lg:justify-around lg:h-20 2xl:h-36 3xl:h-52"
-              : "w-full h-18 text-center bg-white text-blue-450 lg:absolute lg:bottom-0 lg:left-0 lg:items-center lg:flex lg:justify-around lg:h-20 2xl:h-36 3xl:h-52"
-          }
+              : "w-full h-18 text-center bg-white text-blue-450 lg:absolute lg:bottom-0 lg:left-0 lg:items-center lg:flex lg:justify-around lg:h-20 2xl:h-36 3xl:h-52",
+            theme ? TwitterLight : TwitterDark,
+            theme ? InstagramLight : InstagramDark,
+            theme ? LinkedInLight : LinkedInDark,
+          ]}
         >
           <Footer />
         </ThemeContext.Provider>

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Whatsapp from "../../assets/static/whatsapp.png";
 import Correo from "../../assets/static/correo-electronico.png";
 
 import "../../index.css";
 import { Link } from "react-router-dom";
 import { db } from "../../firebase";
+import ThemeContext from "../../context/ThemeContext.js";
 
 const Contact = () => {
+  const [formTitle, textColor] = useContext(ThemeContext);
+
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,9 +46,7 @@ const Contact = () => {
   return (
     <main className="grid grid-cols-auto lg:grid-cols-2 pt-8 justify-center mb-10 2xl:pt-8">
       <div className="border-l-2 ml-8 pl-4 xl:h-full">
-        <h1 className="border-softblue-400 rounded-t-lg text-center font-body font-semibold text-white text-2xl bg-softblue-400 w-11/12 h-12 pb-0 pt-2 md:w-5/6 md:max-w-xs 2xl:max-w-sm 2xl:text-4xl 2xl:h-16 2xl:pt-4">
-          CONTACT ME
-        </h1>
+        <h1 className={formTitle}>CONTACT ME</h1>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col border rounded-b-lg px-8 w-11/12 bg-white gap-3 pt-3 pb-3 font-body font-medium text-sm md:w-5/6 md:max-w-xs lg:pt-2 2xl:max-w-sm 2xl:h-full 2xl:text-xl"
@@ -97,7 +98,7 @@ const Contact = () => {
           </label>
           <button
             placeholder="Send"
-            className="bg-softblue-500 rounded-md self-end h-8 w-24 text-white font-body font-semibold"
+            className="rounded-md self-end h-8 w-24 text-white font-body font-semibold"
             type="submit"
             style={{ background: loader ? "#ccc" : "#3475cf" }}
           >
@@ -105,7 +106,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <article className="flex flex-col px-auto font-body font-medium text-white pt-20 gap-4 mx-5 text-lg 2xl:text-2xl">
+      <article className={textColor}>
         <h1 className="text-3xl text-softblue-500 font-semibold 2xl:text-4xl">
           Let's Work Together!
         </h1>

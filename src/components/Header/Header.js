@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import colombia from "./../../assets/static/colombian-flag.png";
 import usa from "./../../assets/static/usa-flag.png";
 import "../../index.css";
-import { useTranslation } from "react-i18next";
 import { MenuItems } from "./MenuItems";
 import { MenuItems2 } from "./MenuItems";
 import ThemeContext from "../../context/ThemeContext";
@@ -39,7 +38,7 @@ const Header = () => {
         }
       >
         {lenguaje
-          ? MenuItems.map((item, index) => {
+          ? MenuItems2.map((item, index) => {
               return (
                 <li key={index}>
                   <NavLink activeClassName={underline} to={item.url}>
@@ -48,7 +47,7 @@ const Header = () => {
                 </li>
               );
             })
-          : MenuItems2.map((item, index) => {
+          : MenuItems.map((item, index) => {
               return (
                 <li key={index}>
                   <NavLink activeClassName={underline} to={item.url}>
